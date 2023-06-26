@@ -32,4 +32,10 @@ export const message = {
   operationError() {
     console.log(getColorStr('Operation failed', Colors.fgRed))
   },
+
+  amountOfCpus(amount) {
+    console.log(
+      `Overall amount of CPUS: ${getColorStr(amount, Colors.fgGreen)}`
+    )
+  },
 }
