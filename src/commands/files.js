@@ -43,7 +43,7 @@ export const filesHandler = async (
     case Commands.add: {
       const filePath = pathHandler.getAbsolute(firstArguments)
       await fsPromises.appendFile(filePath, '', { flag: 'ax' })
-      message.addFileMessage(firstArguments)
+      message.addFile(firstArguments)
       break
     }
 
@@ -56,7 +56,7 @@ export const filesHandler = async (
       const inputPath = pathHandler.getAbsolute(firstArguments)
       const outputPath = pathHandler.getAbsolute(secondArguments)
       await fsPromises.rename(inputPath, outputPath)
-      message.renameFileMessage(inputPath, secondArguments)
+      message.renameFile(inputPath, secondArguments)
       break
     }
 
@@ -70,7 +70,7 @@ export const filesHandler = async (
         firstArguments,
         secondArguments
       )
-      message.copyFileMessage(sourceFilePath, outputFilePath)
+      message.copyFile(sourceFilePath, outputFilePath)
       break
     }
 
@@ -85,14 +85,14 @@ export const filesHandler = async (
         secondArguments
       )
       await fsPromises.rm(sourceFilePath)
-      message.moveFileMessage(sourceFilePath, outputFilePath)
+      message.moveFile(sourceFilePath, outputFilePath)
       break
     }
 
     case Commands.rm: {
       const filePath = pathHandler.getAbsolute(firstArguments)
       await fsPromises.rm(filePath)
-      message.removeFileMessage(filePath)
+      message.removeFile(filePath)
       break
     }
   }

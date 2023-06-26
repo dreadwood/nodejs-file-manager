@@ -51,11 +51,11 @@ export const message = {
     )
   },
 
-  addFileMessage(fileName) {
+  addFile(fileName) {
     console.log(`File ${getColorStr(fileName, Colors.fgBlue)} is created`)
   },
 
-  renameFileMessage(pathFile, filename) {
+  renameFile(pathFile, filename) {
     console.log(
       `File ${getColorStr(pathFile, Colors.fgBlue)} was renamed ${getColorStr(
         filename,
@@ -64,7 +64,7 @@ export const message = {
     )
   },
 
-  copyFileMessage(sourceFile, outputFile) {
+  copyFile(sourceFile, outputFile) {
     console.log(
       `File ${getColorStr(
         sourceFile,
@@ -73,7 +73,7 @@ export const message = {
     )
   },
 
-  moveFileMessage(sourceFile, outputFile) {
+  moveFile(sourceFile, outputFile) {
     console.log(
       `File ${getColorStr(
         sourceFile,
@@ -82,7 +82,7 @@ export const message = {
     )
   },
 
-  removeFileMessage(pathFile) {
+  removeFile(pathFile) {
     console.log(`File ${getColorStr(pathFile, Colors.fgBlue)} is deleted`)
   },
 
