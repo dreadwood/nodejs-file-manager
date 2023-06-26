@@ -1,5 +1,5 @@
 import readline from 'node:readline/promises'
-import { osHandler, hashHandler } from './commands/index.js'
+import { nwdHandler, osHandler, hashHandler } from './commands/index.js'
 import { parser } from './modules/parser.js'
 import { message } from './modules/message.js'
 import { ExitCode, Commands } from './constants.js'
@@ -18,6 +18,12 @@ export const readlineInput = async () => {
     switch (inputCommand) {
       case Commands.exit:
         process.exit(ExitCode.success)
+
+      case Commands.up:
+      case Commands.cd:
+      case Commands.ls:
+        await nwdHandler(inputCommand, firstArguments)
+        break
 
       case Commands.os:
         osHandler(firstArguments)

@@ -44,4 +44,10 @@ export const message = {
       `Hash for ${getColorStr(pathToFile, Colors.fgBlue)}:${OEL}${hash}`
     )
   },
+
+  rootDirectory() {
+    console.log(
+      `You are in ${getColorStr('the root directory', Colors.fgBlue)}`
+    )
+  },
 }
