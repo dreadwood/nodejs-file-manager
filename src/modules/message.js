@@ -38,4 +38,10 @@ export const message = {
       `Overall amount of CPUS: ${getColorStr(amount, Colors.fgGreen)}`
     )
   },
+
+  hashCalculation(hash, pathToFile, OEL) {
+    console.log(
+      `Hash for ${getColorStr(pathToFile, Colors.fgBlue)}:${OEL}${hash}`
+    )
+  },
 }

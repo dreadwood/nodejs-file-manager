@@ -1,5 +1,5 @@
 import readline from 'node:readline/promises'
-import { osHandler } from './commands/index.js'
+import { osHandler, hashHandler } from './commands/index.js'
 import { parser } from './modules/parser.js'
 import { message } from './modules/message.js'
 import { ExitCode, Commands } from './constants.js'
@@ -21,6 +21,10 @@ export const readlineInput = async () => {
 
       case Commands.os:
         osHandler(firstArguments)
+        break
+
+      case Commands.hash:
+        await hashHandler(firstArguments)
         break
 
       default:
