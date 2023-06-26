@@ -50,4 +50,39 @@ export const message = {
       `You are in ${getColorStr('the root directory', Colors.fgBlue)}`
     )
   },
+
+  addFileMessage(fileName) {
+    console.log(`File ${getColorStr(fileName, Colors.fgBlue)} is created`)
+  },
+
+  renameFileMessage(pathFile, filename) {
+    console.log(
+      `File ${getColorStr(pathFile, Colors.fgBlue)} was renamed ${getColorStr(
+        filename,
+        Colors.fgBlue
+      )}`
+    )
+  },
+
+  copyFileMessage(sourceFile, outputFile) {
+    console.log(
+      `File ${getColorStr(
+        sourceFile,
+        Colors.fgBlue
+      )} was copied as ${getColorStr(outputFile, Colors.fgBlue)}`
+    )
+  },
+
+  moveFileMessage(sourceFile, outputFile) {
+    console.log(
+      `File ${getColorStr(
+        sourceFile,
+        Colors.fgBlue
+      )} was moved as ${getColorStr(outputFile, Colors.fgBlue)}`
+    )
+  },
+
+  removeFileMessage(pathFile) {
+    console.log(`File ${getColorStr(pathFile, Colors.fgBlue)} is deleted`)
+  },
 }

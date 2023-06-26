@@ -1,5 +1,10 @@
 import readline from 'node:readline/promises'
-import { nwdHandler, osHandler, hashHandler } from './commands/index.js'
+import {
+  nwdHandler,
+  filesHandler,
+  osHandler,
+  hashHandler,
+} from './commands/index.js'
 import { parser } from './modules/parser.js'
 import { message } from './modules/message.js'
 import { ExitCode, Commands } from './constants.js'
@@ -23,6 +28,15 @@ export const readlineInput = async () => {
       case Commands.cd:
       case Commands.ls:
         await nwdHandler(inputCommand, firstArguments)
+        break
+
+      case Commands.cat:
+      case Commands.add:
+      case Commands.rn:
+      case Commands.cp:
+      case Commands.mv:
+      case Commands.rm:
+        await filesHandler(inputCommand, firstArguments, secondArguments)
         break
 
       case Commands.os:
