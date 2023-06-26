@@ -85,4 +85,22 @@ export const message = {
   removeFileMessage(pathFile) {
     console.log(`File ${getColorStr(pathFile, Colors.fgBlue)} is deleted`)
   },
+
+  compressFile(sourcePath, outputPath) {
+    console.log(
+      `File ${getColorStr(sourcePath, Colors.fgBlue)} compress to ${getColorStr(
+        outputPath,
+        Colors.fgBlue
+      )}`
+    )
+  },
+
+  decompressFile(sourcePath, outputPath) {
+    console.log(
+      `File ${getColorStr(
+        sourcePath,
+        Colors.fgBlue
+      )} decompress to ${getColorStr(outputPath, Colors.fgBlue)}`
+    )
+  },
 }

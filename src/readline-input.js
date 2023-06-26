@@ -4,6 +4,7 @@ import {
   filesHandler,
   osHandler,
   hashHandler,
+  zipHandler,
 } from './commands/index.js'
 import { parser } from './modules/parser.js'
 import { message } from './modules/message.js'
@@ -45,6 +46,11 @@ export const readlineInput = async () => {
 
       case Commands.hash:
         await hashHandler(firstArguments)
+        break
+
+      case Commands.compress:
+      case Commands.decompress:
+        await zipHandler(inputCommand, firstArguments, secondArguments)
         break
 
       default:
