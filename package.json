@@ -1,0 +1,16 @@
+{
+  "name": "nodejs-file-manager",
+  "description": "File Manager using only Node.js APIs",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "author": "dreadwood",
+  "homepage": "https://github.com/dreadwood/nodejs-file-manager#readme",
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "arrowParens": "avoid"
+  }
+}
